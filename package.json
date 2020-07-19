@@ -1,0 +1,140 @@
+{
+  "name": "aws-cdk-sqlserver-seeder",
+  "version": "1.0.1",
+  "description": "A CDK seeder for SQLServer",
+  "scripts": {
+    "build": "jsii",
+    "build:watch": "jsii -w",
+    "build:powershell": "pwsh -NoProfile -ExecutionPolicy Unrestricted -command New-AWSPowerShellLambdaPackage -ProjectDirectory './lambda' -OutputPackage ./lib/resources/sqlserver-seeder.zip",
+    "package": "jsii-pacmak",
+    "cdk": "cdk",
+    "check": "npm test && npm run lint",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run check",
+    "preversion": "npm run lint",
+    "test": "jest",
+    "version": "npm run format && git add -A src"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "jsii": {
+    "outdir": "dist",
+    "versionFormat": "short",
+    "excludeTypescript": [
+      "tests"
+    ],
+    "targets": {
+      "python": {
+        "distName": "aws-cdk-sqlserver-seeder",
+        "module": "Talnakh.SqlServerSeeder"
+      },
+      "dotnet": {
+        "namespace": "Talnakh.SqlServerSeeder",
+        "packageId": "Talnakh.SqlServerSeeder"
+      },
+      "java": {
+        "package": "xyz.talnakh.AWSCDKSQLServerSeeder",
+        "maven": {
+          "groupId": "xyz.talnakh",
+          "artifactId": "SqlServerSeeder"
+        }
+      }
+    }
+  },
+  "stability": "experimental",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kolomied/aws-cdk-sqlserver-seeder.git"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "sqlserver",
+    "seed",
+    "seeder"
+  ],
+  "author": {
+    "name": "Dmitry Kolomiets",
+    "email": "kolomied@amazon.co.uk",
+    "url": "https://github.com/kolomied"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kolomied/aws-cdk-sqlserver-seeder/issues"
+  },
+  "homepage": "https://github.com/kolomied/aws-cdk-sqlserver-seeder#readme",
+  "dependencies": {
+    "@aws-cdk/aws-rds": "^1.49.1",
+    "@aws-cdk/aws-lambda": "^1.49.1",
+    "@aws-cdk/aws-s3": "^1.49.1",
+    "@aws-cdk/aws-s3-deployment": "^1.49.1",
+    "@aws-cdk/core": "^1.49.1",
+    "@aws-cdk/custom-resources": "^1.49.1",
+    "@aws-cdk/aws-secretsmanager": "^1.49.1",
+    "aws-sdk": "^2.709.0",
+    "constructs": "^3.0.4",
+    "tmp": "^0.2.1"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.49.1",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "@types/tmp": "^0.2.0",
+    "aws-cdk": "^1.49.1",
+    "eslint": "^7.4.0",
+    "jest": "^26.1.0",
+    "jsii": "^1.8.0",
+    "jsii-pacmak": "^1.8.0",
+    "jsii-release": "^0.1.9",
+    "minimist": ">=1.2.5",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.6"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib/*.ts",
+      "!node_modules/**"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "warnOnly": true
+        }
+      },
+      "testEnvironment": "node"
+    }
+  },
+  "peerDependencies": {
+    "@aws-cdk/aws-rds": "^1.49.1",
+    "@aws-cdk/aws-lambda": "^1.49.1",
+    "@aws-cdk/aws-s3": "^1.49.1",
+    "@aws-cdk/aws-s3-deployment": "^1.49.1",
+    "@aws-cdk/core": "^1.49.1",
+    "@aws-cdk/custom-resources": "^1.49.1",
+    "@aws-cdk/aws-secretsmanager": "^1.49.1",
+    "constructs": "^3.0.4"
+  },
+  "bundledDependencies": [
+    "aws-sdk",
+    "tmp"
+  ]
+}
