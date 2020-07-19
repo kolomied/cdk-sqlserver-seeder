@@ -51,7 +51,7 @@ export class SqlServerSeeder extends cdk.Construct {
     this.prepareSqlScripts(id, props, destinationBucket);
 
     const sqlSeederLambda = new lambda.Function(this, 'lambda', {
-      code: new lambda.AssetCode('./lambda/sqlserver-seeder.zip'),
+      code: new lambda.AssetCode(__dirname + '/resources/sqlserver-seeder.zip'),
       handler: 'seed::seed.Bootstrap::ExecuteFunction',
       timeout: cdk.Duration.seconds(300),
       runtime: lambda.Runtime.DOTNET_CORE_3_1,
