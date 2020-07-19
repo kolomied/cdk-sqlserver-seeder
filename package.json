@@ -15,7 +15,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm run check",
     "preversion": "npm run lint",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "version": "npm run format && git add -A src"
   },
   "main": "lib/index.js",
