@@ -10,7 +10,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export interface SqlServerSeederProps {
-  readonly vpc: ec2.Vpc;
+  readonly vpc: ec2.IVpc;
   readonly database: rds.DatabaseInstance,
   readonly port: number,
 
