@@ -24,6 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - run: npm run build:powershell
     - run: make
 
     - run: make publish-npm
