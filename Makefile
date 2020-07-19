@@ -9,7 +9,7 @@ build:
 		--workdir ${DOCKER_WORKDIR} \
 		--volume ${PWD}:${DOCKER_WORKDIR} \
 		${DOCKER_IMAGE}:${DOCKER_TAG} \
-		/bin/bash -c "rm -rf dist && npm i && npm run package"
+		/bin/bash -c "rm -rf dist && pwsh -Command Install-Module AWSLambdaPSCore -Force && npm run build:powershell && npm i && npm run package"
 
 publish-npm:
 	docker run \
