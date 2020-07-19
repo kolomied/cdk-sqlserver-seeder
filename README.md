@@ -5,6 +5,7 @@
 [![npm version](https://badge.fury.io/js/cdk-sqlserver-seeder.svg)](https://badge.fury.io/js/cdk-sqlserver-seeder)
 [![PyPI version](https://badge.fury.io/py/cdk-sqlserver-seeder.svg)](https://badge.fury.io/py/cdk-sqlserver-seeder)
 [![NuGet version](https://badge.fury.io/nu/Talnakh.SqlServerSeeder.svg)](https://badge.fury.io/nu/Talnakh.SqlServerSeeder)
+[![Maven Central](https://img.shields.io/maven-central/v/xyz.talnakh/SqlServerSeeder?color=brightgreen)](https://repo1.maven.org/maven2/xyz/talnakh/SqlServerSeeder/)
 
 A simple CDK seeder for SQL Server RDS databases.
 
