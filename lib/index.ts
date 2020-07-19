@@ -9,7 +9,7 @@ import * as tmp from 'tmp';
 import * as fs from 'fs';
 import * as path from 'path';
 
-export interface SqlSeederProps {
+export interface SqlServerSeederProps {
   readonly vpc: ec2.Vpc;
   readonly database: rds.DatabaseInstance,
   readonly port: number,
@@ -32,9 +32,9 @@ export interface SqlSeederProps {
   readonly ignoreSqlErrors?: boolean
 }
 
-export class SqlSeeder extends cdk.Construct {
+export class SqlServerSeeder extends cdk.Construct {
 
-  constructor(scope: cdk.Construct, id: string, props: SqlSeederProps) {
+  constructor(scope: cdk.Construct, id: string, props: SqlServerSeederProps) {
     super(scope, id);
 
     if (!props.database.secret) {
@@ -87,7 +87,7 @@ export class SqlSeeder extends cdk.Construct {
     sqlSeederLambda.connections.allowTo(props.database, ec2.Port.tcp(props.port));
   }
 
-  private prepareSqlScripts(id: string, props: SqlSeederProps, destinationBucket: s3.Bucket) {
+  private prepareSqlScripts(id: string, props: SqlServerSeederProps, destinationBucket: s3.Bucket) {
     tmp.setGracefulCleanup();
     tmp.dir((err, dir) => {
       if (err)
