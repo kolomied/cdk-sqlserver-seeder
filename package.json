@@ -1,6 +1,6 @@
 {
   "name": "cdk-sqlserver-seeder",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "A CDK seeder for SQLServer",
   "scripts": {
     "build": "jsii",
