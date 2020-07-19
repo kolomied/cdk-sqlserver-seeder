@@ -1,4 +1,4 @@
-name: jsii pre-publish checks
+name: jsii-pre-publish checks
 
 on:
   push:
