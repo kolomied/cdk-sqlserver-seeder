@@ -1,6 +1,6 @@
 {
   "name": "aws-cdk-sqlserver-seeder",
-  "version": "1.0.1",
+  "version": "0.1.1",
   "description": "A CDK seeder for SQLServer",
   "scripts": {
     "build": "jsii",
@@ -28,7 +28,7 @@
     ],
     "targets": {
       "python": {
-        "distName": "aws-cdk-sqlserver-seeder",
+        "distName": "cdk-sqlserver-seeder",
         "module": "Talnakh.SqlServerSeeder"
       },
       "dotnet": {
@@ -36,7 +36,7 @@
         "packageId": "Talnakh.SqlServerSeeder"
       },
       "java": {
-        "package": "xyz.talnakh.AWSCDKSQLServerSeeder",
+        "package": "xyz.talnakh.SqlServerSeeder",
         "maven": {
           "groupId": "xyz.talnakh",
           "artifactId": "SqlServerSeeder"
