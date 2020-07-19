@@ -2,6 +2,10 @@
 ![build](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/build/badge.svg)
 [![dependencies](https://david-dm.org/kolomied/cdk-sqlserver-seeder.svg)](https://david-dm.org//kolomied/cdk-sqlserver-seeder)
 
+[![npm version](https://badge.fury.io/js/cdk-sqlserver-seeder.svg)](https://badge.fury.io/js/cdk-sqlserver-seeder)
+[![PyPI version](https://badge.fury.io/py/cdk-sqlserver-seeder.svg)](https://badge.fury.io/py/cdk-sqlserver-seeder)
+[![NuGet version](https://badge.fury.io/nu/Talnakh.SqlServerSeeder.svg)](https://badge.fury.io/nu/Talnakh.SqlServerSeeder)
+
 A simple CDK seeder for SQL Server RDS databases.
 
 *cdk-sqlserver-seeder* library is a [AWS CDK](https://aws.amazon.com/cdk/) construct that provides a way 
