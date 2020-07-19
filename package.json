@@ -1,5 +1,5 @@
 {
-  "name": "aws-cdk-sqlserver-seeder",
+  "name": "cdk-sqlserver-seeder",
   "version": "0.1.1",
   "description": "A CDK seeder for SQLServer",
   "scripts": {
@@ -47,7 +47,7 @@
   "stability": "experimental",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kolomied/aws-cdk-sqlserver-seeder.git"
+    "url": "https://github.com/kolomied/cdk-sqlserver-seeder.git"
   },
   "keywords": [
     "aws",
@@ -63,9 +63,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kolomied/aws-cdk-sqlserver-seeder/issues"
+    "url": "https://github.com/kolomied/cdk-sqlserver-seeder/issues"
   },
-  "homepage": "https://github.com/kolomied/aws-cdk-sqlserver-seeder#readme",
+  "homepage": "https://github.com/kolomied/cdk-sqlserver-seeder#readme",
   "dependencies": {
     "@aws-cdk/aws-rds": "^1.49.1",
     "@aws-cdk/aws-lambda": "^1.49.1",
