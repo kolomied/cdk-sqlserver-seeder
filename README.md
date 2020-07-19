@@ -1,4 +1,4 @@
-# aws-cdk-sqlserver-seeder
+# cdk-sqlserver-seeder
 ![build](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/build/badge.svg)
 [![dependencies](https://david-dm.org/kolomied/cdk-sqlserver-seeder.svg)](https://david-dm.org//kolomied/cdk-sqlserver-seeder)
 
