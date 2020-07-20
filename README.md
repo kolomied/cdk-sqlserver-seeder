@@ -34,7 +34,7 @@ export class DatabaseStack extends cdk.Stack {
             // all other properties removed for clarity
         });
 
-        const seeder = new SqlSeederSecret(this, "SqlSeederSecret", { 
+        const seeder = new SqlServerSeeder(this, "SqlSeeder", { 
             database: sqlServer,
             port: 1433,
             vpc: vpc,
