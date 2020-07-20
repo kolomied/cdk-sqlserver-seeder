@@ -2,6 +2,7 @@
 ![build](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/build/badge.svg)
 ![jsii-publish](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/jsii-publish/badge.svg)
 [![dependencies](https://david-dm.org/kolomied/cdk-sqlserver-seeder.svg)](https://david-dm.org//kolomied/cdk-sqlserver-seeder)
+![downloads](https://img.shields.io/npm/dt/cdk-sqlserver-seeder)
 
 [![npm version](https://badge.fury.io/js/cdk-sqlserver-seeder.svg)](https://badge.fury.io/js/cdk-sqlserver-seeder)
 [![PyPI version](https://badge.fury.io/py/cdk-sqlserver-seeder.svg)](https://badge.fury.io/py/cdk-sqlserver-seeder)
