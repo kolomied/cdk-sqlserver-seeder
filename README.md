@@ -44,6 +44,40 @@ export class DatabaseStack extends cdk.Stack {
 }
 ```
 
+## Configuration properties
+SqlServerSeeder construct accepts the following configuration properties:
+
+| Parameter  | Required  | Default | Description |
+|---|---|---|---|
+| `vpc`              | yes |       | VPC for Lambda function deployment      | 
+| `database`         | yes |       | RDS SQL Server database instance        |
+| `createScriptPath` | yes |       | SQL scripts to run on resource creation |
+| `deleteScriptPath` | no  |       | SQL script to run on resource deletion  |
+| `port`             | no  | 1433  | RSD SQL Server database port            |
+| `memorySize`       | no  | 512   | Lambda function memory size             |
+| `ignoreSqlErrors`  | no  | false | Whether to ignore SQL error or not      |
+
+## Architecture
+
+![Architecture](/doc/architecture.png)
+
+`cdk-sqlserver-seeder` deploys a custom resource backed by PowerShell lambda to connect to SQL Server instance. Lambda function is deployed in private subnets of your VPC where RDS instance resides.
+
+Lambda function retrieves database credentials from [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/) and uses them to construct connection string to the database.
+
+SQL scripts are uploaded into S3 bucket during CDK application deployment.
+Lambda function downloads these scripts during execution.
+
+## Security considerations
+Lambda function has the following permissions:
+
+- Managed policies
+   - `AWSLambdaBasicExecutionRole` for CloudWatch logs
+   - `AWSLambdaVPCAccessExecutionRole` for VPC access
+- Inline policy
+  - `secretsmanager:GetSecretValue` for RDS credentials secret
+  - `s3:GetObject*`, `s3:GetBucket*`, `s3:List*` for S3 bucket with SQL scripts
+
 ## Acknowledgements
 The whole project inspired by [aws-cdk-dynamodb-seeder](https://github.com/elegantdevelopment/aws-cdk-dynamodb-seeder). 
 I though it would be very helpful to have a similar way to seed initial schema to more traditional SQL Server databases.
