@@ -1,7 +1,6 @@
-# cdk-sqlserver-seeder [![Awesome](https://awesome.re/badge-flat.svg)](https://github.com/sindresorhus/awesome)
+# cdk-sqlserver-seeder [![Mentioned in Awesome CDK](https://awesome.re/mentioned-badge.svg)](https://github.com/eladb/awesome-cdk)
 ![build](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/build/badge.svg)
 ![jsii-publish](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/jsii-publish/badge.svg)
-[![dependencies](https://david-dm.org/kolomied/cdk-sqlserver-seeder.svg)](https://david-dm.org//kolomied/cdk-sqlserver-seeder)
 ![downloads](https://img.shields.io/npm/dt/cdk-sqlserver-seeder)
 
 [![npm version](https://badge.fury.io/js/cdk-sqlserver-seeder.svg)](https://badge.fury.io/js/cdk-sqlserver-seeder)
