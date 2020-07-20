@@ -1,4 +1,4 @@
-# cdk-sqlserver-seeder
+# cdk-sqlserver-seeder [![Awesome](https://awesome.re/badge-flat.svg)](https://github.com/sindresorhus/awesome)
 ![build](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/build/badge.svg)
 ![jsii-publish](https://github.com/kolomied/cdk-sqlserver-seeder/workflows/jsii-publish/badge.svg)
 [![dependencies](https://david-dm.org/kolomied/cdk-sqlserver-seeder.svg)](https://david-dm.org//kolomied/cdk-sqlserver-seeder)
