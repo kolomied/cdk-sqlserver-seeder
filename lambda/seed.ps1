@@ -79,7 +79,7 @@ function RunSQLScript {
         Write-Host "Database secret retrieved"
         $username = $secret.username
         $password = $secret.password
-        $connectionString = "Server=${dbEndpoint};User Id=${username};Password=${password}"
+        $connectionString = "Server=${dbEndpoint};User Id=${username};Password='${password}'"
 
         # execute the cript
         $errorAction = if ($IgnoreErrors) {"Continue"} else {"Stop"}
@@ -143,7 +143,7 @@ try {
     }
 }
 catch {
-    Write-Host "Unhandled error during deployment.  $_"
+    Write-Error "Unhandled error during deployment.  $_"
     $body.Reason = "$($body.Reason). $_"
     $body.Status = "FAILED"
 }
