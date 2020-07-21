@@ -10,11 +10,16 @@
 
 A simple CDK seeder for SQL Server RDS databases.
 
-*cdk-sqlserver-seeder* library is a [AWS CDK](https://aws.amazon.com/cdk/) construct that provides a way 
-to execute custom SQL scripts on RDS SQL Server resource creation/deletion.
+When you create an RDS SQL Server instance using CloudFormation template, there is no way to provide initial 
+schema definition as part of CloudFormation stack deployment. Custom schema deployment scripts can be executed 
+only after the database deployment is complete. 
+
+*cdk-sqlserver-seeder* library is a [AWS CDK](https://aws.amazon.com/cdk/) construct that provides a way to automate 
+this process and eliminate manual steps involved in the process of preparing new RDS SQL Server environment by 
+executing custom SQL scripts on RDS SQL Server instance creation/deletion.
 
 The construct relies on [Invoke-SqlCmd](https://docs.microsoft.com/en-us/powershell/module/sqlserver/invoke-sqlcmd) cmdlet 
-to run the scripts and handle possible errors. Provides a way to handle transient errors during stack provisioning.
+to run the scripts and provides a way to handle transient errors during stack provisioning.
 
 ## Usage
 
