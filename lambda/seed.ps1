@@ -77,9 +77,14 @@ function RunSQLScript {
         # Retrieving database connection details
         $secret = (Get-SECSecretValue -SecretId $secretArn -Select "SecretString" -ErrorAction Stop) | ConvertFrom-Json
         Write-Host "Database secret retrieved"
-        $username = $secret.username
-        $password = $secret.password
-        $connectionString = "Server=${dbEndpoint};User Id=${username};Password='${password}'"
+
+        $connectionBuilder = New-Object System.Data.SqlClient.SqlConnectionStringBuilder `
+            -Property @{
+                DataSource = $dbEndpoint
+                UserID = $secret.username
+                Password = $secret.password
+            }
+        $connectionString = $connectionBuilder.PSBase.ConnectionString
 
         # execute the cript
         $errorAction = if ($IgnoreErrors) {"Continue"} else {"Stop"}
